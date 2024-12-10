@@ -1,0 +1,15 @@
+{
+  "products": [
+    {
+      "name": "Product Name",
+      "price": 99.99,
+      "image": "images/product1.jpg",
+      "sizes": {
+        "S": "https://example.com/product1/small",
+        "M": "https://example.com/product1/medium",
+        "L": "https://example.com/product1/large",
+        "XL": "https://example.com/product1/xlarge"
+      }
+    }
+  ]
+}
