@@ -9,6 +9,7 @@ async function loadProducts() {
     productElement.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <h2>${product.name}</h2>
+      <p class="description">${product.description}</p>
       <div class="price-size">
         <span class="price">$${product.price}</span>
         <div class="size-selector">
