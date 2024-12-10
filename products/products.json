@@ -3,6 +3,7 @@
     {
       "name": "Product Name",
       "price": 99.99,
+      "description": "This is a detailed description of the product, highlighting its features and benefits.",
       "image": "images/product1.jpg",
       "sizes": {
         "S": "https://example.com/product1/small",
