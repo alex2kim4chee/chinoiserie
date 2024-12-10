@@ -9,26 +9,26 @@ async function loadProducts() {
     productElement.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <h2>${product.name}</h2>
-      <p>${product.description}</p>
-      <p><strong>Price:</strong> $${product.price}</p>
-      <div class="size-selector">
-        <label for="size-${product.name}">Size:</label>
-        <select id="size-${product.name}" class="size-dropdown">
-          ${Object.keys(product.sizes)
-            .map(size => `<option value="${product.sizes[size]}">${size}</option>`)
-            .join('')}
-        </select>
+      <div class="price-size">
+        <span class="price">$${product.price}</span>
+        <div class="size-selector">
+          <select>
+            ${Object.keys(product.sizes)
+              .map(size => `<option value="${product.sizes[size]}">${size}</option>`)
+              .join('')}
+          </select>
+        </div>
       </div>
-      <button class="shop-now">Shop Now</button>
+      <button class="order-now">Order</button>
     `;
 
     productsContainer.appendChild(productElement);
 
-    const sizeDropdown = productElement.querySelector('.size-dropdown');
-    const shopNowButton = productElement.querySelector('.shop-now');
+    const sizeDropdown = productElement.querySelector('.size-selector select');
+    const orderButton = productElement.querySelector('.order-now');
 
     sizeDropdown.addEventListener('change', (event) => {
-      shopNowButton.onclick = () => {
+      orderButton.onclick = () => {
         const url = event.target.value;
         if (url) window.open(url, '_blank');
       };
