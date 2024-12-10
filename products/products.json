@@ -11,6 +11,18 @@
         "L": "https://example.com/product1/large",
         "XL": "https://example.com/product1/xlarge"
       }
+    },
+      {
+      "name": "Product Name",
+      "price": 99.99,
+      "description": "This is a detailed description of the product, highlighting its features and benefits.",
+      "image": "images/product1.webp",
+      "sizes": {
+        "S": "https://example.com/product1/small",
+        "M": "https://example.com/product1/medium",
+        "L": "https://example.com/product1/large",
+        "XL": "https://example.com/product1/xlarge"
+      }
     }
   ]
 }
