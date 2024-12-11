@@ -29,17 +29,18 @@ header {
 
 .product-image {
     position: relative;
-    width: 100%;
-    overflow: hidden;
+    width: 100%; /* Контейнер занимает всю ширину карточки товара */
+    aspect-ratio: 1 / 1; /* Задаём соотношение сторон 1:1 (квадратный контейнер) */
+    overflow: hidden; /* Изображения обрезаются, если выходят за пределы контейнера */
 }
 
 .product-image img {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%; /* Изображения заполняют ширину контейнера */
-    height: auto; /* Сохраняется пропорциональность */
-    transform: translate(-50%, -50%);
+    width: auto; /* Ширина подстраивается автоматически */
+    height: 100%; /* Изображение заполняет высоту контейнера */
+    transform: translate(-50%, -50%); /* Центрирование изображения */
     transition: opacity 0.3s ease-in-out;
 }
 
