@@ -7,7 +7,10 @@ async function loadProducts() {
     productElement.className = 'product-item';
 
     productElement.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
+      <div class="product-image">
+        <img src="${product.image}" alt="${product.name}" class="front">
+        <img src="${product.image.replace('.webp', '-back.webp')}" alt="${product.name} Back" class="back">
+      </div>
       <h2>${product.name}</h2>
       <p class="description">${product.description}</p>
       <div class="price-size">
@@ -36,6 +39,17 @@ async function loadProducts() {
     });
 
     sizeDropdown.dispatchEvent(new Event('change'));
+
+    // Mobile touch toggle
+    const productImage = productElement.querySelector('.product-image');
+    productImage.addEventListener('click', () => {
+      const frontImage = productImage.querySelector('.front');
+      const backImage = productImage.querySelector('.back');
+      const isFrontVisible = window.getComputedStyle(frontImage).opacity === '1';
+
+      frontImage.style.opacity = isFrontVisible ? '0' : '1';
+      backImage.style.opacity = isFrontVisible ? '1' : '0';
+    });
   }
 }
 
