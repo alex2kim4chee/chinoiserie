@@ -1,15 +1,15 @@
 {
   "products": [
     {
-      "name": "Product Name",
-      "price": 99.99,
-      "description": "This is a detailed description of the product, highlighting its features and benefits.",
-      "image": "images/product1.webp",
+      "name": "Jungle Majesty Hoodie",
+      "price": 100,
+      "description": "Chinoiserie hoodie with intricate jungle and leopard patterns.",
+      "image": "images/jungle_majesty_hoodie.webp",
       "sizes": {
-        "S": "https://example.com/product1/small",
-        "M": "https://example.com/product1/medium",
-        "L": "https://example.com/product1/large",
-        "XL": "https://example.com/product1/xlarge"
+        "S": "https://example.com/jacket/small",
+        "M": "https://example.com/jacket/medium",
+        "L": "https://example.com/jacket/large",
+        "XL": "https://example.com/jacket/xlarge"
       }
     },
       {
